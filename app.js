@@ -5,7 +5,8 @@ function calcular() {
     M: Number(document.getElementById("ing_M").value),
     N: Number(document.getElementById("ing_N").value),
     V: Number(document.getElementById("ing_V").value),
-    NY: Number(document.getElementById("ing_NY").value)
+    NY: Number(document.getElementById("ing_NY").value),
+    MM: Number(document.getElementById("ing_MM").value)
   };
 
   // 2. Leer gastos
@@ -14,7 +15,7 @@ function calcular() {
 
   // 3. Definir grupos
   const grupoGatos = ["M", "N", "V", "NY"];
-  const grupoPerro = ["M", "N", "NY"];
+  const grupoPerro = ["M", "N", "NY", "MM"];
 
   // 4. Sumar ingresos por grupo
   const totalGatos = grupoGatos.reduce((suma, p) => suma + ingresos[p], 0);
@@ -25,7 +26,8 @@ function calcular() {
     M: { gatos: 0, perro: 0 },
     N: { gatos: 0, perro: 0 },
     V: { gatos: 0, perro: 0 },
-    NY: { gatos: 0, perro: 0 }
+    NY: { gatos: 0, perro: 0 },
+    MM: { gatos: 0, perro: 0 }
   };
 
   // 6. Calcular pagos para gatos
@@ -90,6 +92,7 @@ window.onload = function () {
   document.getElementById("ing_N").value = estado.ingresos.N;
   document.getElementById("ing_V").value = estado.ingresos.V;
   document.getElementById("ing_NY").value = estado.ingresos.NY;
+  document.getElementById("ing_MM").value = estado.ingresos.MM;
 
   document.getElementById("gatos").value = estado.gastoGatos;
   document.getElementById("perro").value = estado.gastoPerro;
