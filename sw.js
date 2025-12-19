@@ -2,6 +2,7 @@ const CACHE_NAME = "mascotas-cache-v4";
 const ASSETS = [
   "./",
   "./index.html",
+  "./styles.css",
   "./app.js",
   "./manifest.json"
 ];
@@ -40,5 +41,6 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+
 
 
