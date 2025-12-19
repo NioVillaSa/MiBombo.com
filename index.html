@@ -5,38 +5,48 @@
   <title>MiBombo.com</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#2c3e50">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css?v=1.0">
 </head>
-<script src="app.js"></script>
 
 <body>
-<h1>Manutención de Mascotas</h1>
+  <h1>Manutención de Mascotas</h1>
 
-<h2>Ingresos mensuales</h2>
-<label>M: <input type="number" id="ing_M"></label><br>
-<label>N: <input type="number" id="ing_N"></label><br>
-<label>V: <input type="number" id="ing_V"></label><br>
-<label>Ñ: <input type="number" id="ing_NY"></label><br>
-<label>MM: <input type="number" id="ing_MM"></label><br>
+  <section>
+    <h2>Ingresos mensuales</h2>
+    <label>M <input type="number" id="ing_M"></label>
+    <label>N <input type="number" id="ing_N"></label>
+    <label>V <input type="number" id="ing_V"></label>
+    <label>Ñ <input type="number" id="ing_NY"></label>
+    <label>MM <input type="number" id="ing_MM"></label>
+  </section>
 
-<h2>Gastos</h2>
-<label>Gatos: <input type="number" id="gatos"></label><br>
-<label>Perro: <input type="number" id="perro"></label><br>
-<br>
+  <section>
+    <h2>Gastos</h2>
+    <label>Gatos <input type="number" id="gatos"></label>
+    <label>Perro <input type="number" id="perro"></label>
+  </section>
 
-<button onclick="calcular()">Calcular</button>
-<h2>Resultado</h2>
+  <button onclick="calcular()">Calcular</button>
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>Persona</th>
-      <th>Gatos</th>
-      <th>Perro</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody id="resultado"></tbody>
-</table>
+  <section>
+    <h2>Resultado</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Persona</th>
+          <th>Gatos</th>
+          <th>Perro</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="resultado"></tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+
 
 </body>
+
 </html>
